@@ -44,7 +44,7 @@ jobs:
         args: >
          -Dsonar.organization=mukunda2912
          -Dsonar.projectKey=Mukunda2912_sample-project
-         -Dsonar.go.coverage.reportPaths=.src/cov.out
+         -Dsonar.go.coverage.reportPaths=./src/cov.out
          -Dsonar.exclusions=**/*_test.go
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
