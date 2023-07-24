@@ -84,7 +84,7 @@ jobs:
       - name: Run unit Tests
         run: |
             go test -coverprofile=./src/cov.out ./src/
-            go test -json ./src/ > report.json
+#           go test -json ./src/ > report.json
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
