@@ -93,10 +93,10 @@ jobs:
           name: sonarqube-report
           path: reports.json
   
-      - uses: actions/download-artifact@v2.1.1
-        with:
-          name: sonarqube-report
-          path: reports.json
+#       - uses: actions/download-artifact@v2.1.1
+#         with:
+#           name: sonarqube-report
+#           path: reports.json
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -105,7 +105,7 @@ jobs:
           args: >
              -Dsonar.projectKey=first-ghapp
              -Dsonar.exclusions=**/*_test.go
-             -Dsonar.go.tests.reportPaths=reports.json
+             -Dsonar.go.tests.reportPaths=./src/reports.json
              -Dsonar.go.coverage.reportPaths=./src/cov.out
              
              
