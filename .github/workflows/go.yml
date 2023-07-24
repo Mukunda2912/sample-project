@@ -96,7 +96,7 @@ jobs:
              -Dsonar.projectKey=first-ghapp
              -Dsonar.exclusions=**/*_test.go
              -Dsonar.go.tests.reportPaths=./src/report.json
-#            -Dsonar.go.coverage.reportPaths=./src/cov.out
+             -Dsonar.go.coverage.reportPaths=./src/cov.out
              
              
       
