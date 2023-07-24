@@ -105,7 +105,7 @@ jobs:
           args: >
              -Dsonar.projectKey=first-ghapp
              -Dsonar.exclusions=**/*_test.go
-             -Dsonar.go.coverage.reportPaths=sonarqube-report
+             -Dsonar.go.coverage.reportPaths=report.json
    #          -Dsonar.go.tests.reportPaths=sonarqube-report
              
              
