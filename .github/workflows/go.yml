@@ -83,7 +83,7 @@ jobs:
       - name: Build
         run: go build -v ./src
       - name: Run unit Tests
-        run: go test -coverprofile ./src/cov.out -json  > report.json
+        run: go test -coverprofile ./src/cov.out -json ./src > report.json
 #            go test -coverprofile=./src/cov.out ./src/
  #           go test -json ./src/ > report.json
             
