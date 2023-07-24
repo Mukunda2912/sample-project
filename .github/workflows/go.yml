@@ -95,7 +95,7 @@ jobs:
              -Dsonar.projectKey=first-ghapp
              -Dsonar.go.coverage.reportPaths=./src/cov.out
              -Dsonar.exclusions=**/*_test.go
-             -Dsonar.go.tests.reportPaths=./src/report.json
+             -Dsonar.go.tests.reportPaths=report.json
              
       
       # If you wish to fail your job when the Quality Gate is red, uncomment the
