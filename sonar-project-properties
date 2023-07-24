@@ -1,4 +1,4 @@
-sonar.projectKey=first-app
+sonar.projectKey=first-ghapp
 sonar.sources=.
 sonar.exclusions=**/*_test.go,**/vendor/**,**/testdata/*
 sonar.tests=.
