@@ -40,15 +40,15 @@ jobs:
 #           gosec -fmt=json -out report.json ./...
  
       
-    - name: Analyze with SonarCloud
-      uses: SonarSource/sonarcloud-github-action@v1.9.1
+    - name: Analyze with SonarQube
+      uses: sonarsource/sonarqube-scan-action@master
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{secrets.SONAR_HOST_URL}}
-      with:
-        args: >
-         -Dsonar.organization=mukunda2912
-         -Dsonar.projectKey=first-app
-         -Dsonar.go.coverage.reportPaths=./src/cov.out
-         -Dsonar.exclusions=**/*_test.go
+#       with:
+#         args: >
+#          -Dsonar.organization=mukunda2912
+#          -Dsonar.projectKey=first-app
+#          -Dsonar.go.coverage.reportPaths=./src/cov.out
+#          -Dsonar.exclusions=**/*_test.go
      
