@@ -85,18 +85,18 @@ jobs:
       - name: Run unit Tests
         run: |
            go test -coverprofile=./src/cov.out ./src/
-           go test -json ./src/ > report.json
+           go test -json ./src/ > reports.json
  
       - name: Upload report.json to Sonarqube
         uses: actions/upload-artifact@v3.1.2
         with:
           name: sonarqube-report
-          path: report.json
+          path: reports.json
   
       - uses: actions/download-artifact@v2.1.1
         with:
           name: sonarqube-report
-          path: report1.json
+          path: reports.json
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -105,7 +105,7 @@ jobs:
           args: >
              -Dsonar.projectKey=first-ghapp
              -Dsonar.exclusions=**/*_test.go
-             -Dsonar.go.tests.reportPaths=report1.json
+             -Dsonar.go.tests.reportPaths=reports.json
              -Dsonar.go.coverage.reportPaths=./src/cov.out
              
              
