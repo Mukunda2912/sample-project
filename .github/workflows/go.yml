@@ -84,7 +84,7 @@ jobs:
       - name: Run unit Tests
         run: |
             go test -coverprofile=./src/cov.out ./src/
-            go test -json  > report.json
+            go test -json ./src/ > report.json
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -94,6 +94,7 @@ jobs:
              -Dsonar.projectKey=first-ghapp
              -Dsonar.go.coverage.reportPaths=./src/cov.out
              -Dsonar.exclusions=**/*_test.go
+             -DSonar.inclusions=./src/report.json
              
       
       # If you wish to fail your job when the Quality Gate is red, uncomment the
