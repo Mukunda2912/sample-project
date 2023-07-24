@@ -1,2 +1,4 @@
 sonar.projectKey=first-ghapp
-
+sonar.exclusions=**/*_test.go
+sonar.go.tests.reportPaths=./src/report.json
+sonar.go.coverage.reportPaths=./src/cov.out
