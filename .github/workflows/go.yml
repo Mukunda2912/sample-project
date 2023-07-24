@@ -87,11 +87,11 @@ jobs:
            go test -coverprofile=./src/cov.out ./src/
            go test -json ./src/ > report.json
  
-      - name: Upload report.json to Sonarqube
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: sonarqube-report
-          path: report.json
+#       - name: Upload report.json to Sonarqube
+#         uses: actions/upload-artifact@v3.1.2
+#         with:
+#           name: sonarqube-report
+#           path: report.json
   
       - uses: actions/download-artifact@v2.1.1
         with:
