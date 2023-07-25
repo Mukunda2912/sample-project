@@ -57,9 +57,9 @@
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "new-workflow" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "new-workflow" ]
     types: [opened, synchronize, reopened]
 
 
