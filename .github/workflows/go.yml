@@ -94,7 +94,7 @@ jobs:
           go install github.com/jstemmer/go-junit-report/v2@latest
           go test -v ./src | go-junit-report > test-report.xml
           cp test-report.xml test-report2.xml
- 
+          ls ./src
       
     - name: Analyze with SonarCloud
       uses: SonarSource/sonarcloud-github-action@v1.9.1
