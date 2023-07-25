@@ -90,7 +90,9 @@ jobs:
       run: |
           go test -coverprofile=./src/cov.out ./src/
           go test -json ./src/ > report.json
-          go test -xml ./src/ > report.xml
+          
+          go install github.com/jstemmer/go-junit-report/v2@latest
+          go test -v ./src | go-junit-report > test-report.xml
  
       
     - name: Analyze with SonarCloud
