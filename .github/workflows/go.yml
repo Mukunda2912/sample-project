@@ -7,9 +7,9 @@ name: sonar-project
    
 on:
   push:
-    branches: [ "new-workflow" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "new-workflow" ]
+    branches: [ "master" ]
     types: [opened, synchronize, reopened]
 
 
